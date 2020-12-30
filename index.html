@@ -2,11 +2,147 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=git branch -M main
-  , initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mobile store</title>
+  <style>
+        * ,
+    *::after,*::before{
+   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+    }
+ .container{
+  width: 80%;
+  float: left;
+  margin-left: 10%;
+   
+    }
+    /* HEADER */
+  .header{
+  width: 100%;
+  height: 300px;
+  background: url("images/header.jpg") no-repeat center top;
+  background-size: cover;
+  color: white;
+  padding: 80px 0;
+  text-align: center;
+  font-family: serif;
+  }
+  .header h1 {
+    color: white;
+    font-size: 50px;
+  }
+  .header p {
+    color: aliceblue;
+    margin: 40px 0;
+  }
+    /* Main */
+  .parent{
+    margin: 100px auto;
+    }
+  .phone{
+    width: 32%;
+    height: 400px;
+    background-color: white;
+    position: relative;
+    overflow: hidden;
+    float: left;
+    margin: 1% auto;
+    margin-left: 1%;
+    border: 1px solid orange;
+    }
+    .phone::before {
+    content: attr(data-name);
+    width: 100%;
+    padding: 15px 0;
+    background-color: #80add7;
+    display: block;
+    text-align: center;
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    transition: 0.7s;
+    color: white;
+    }
+    .phone:hover::before{
+      transform: translateY(100%);
+    }
+    .phone::after{
+      content: attr(data-sell);
+      width: 100%;
+      padding: 15px 0;
+      background-color: #0abda0;
+      display: block;
+      text-align: center;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      transition: 0.7s; 
+      color: white;
+}
+    .phone:hover::after{
+      transform: translateY(-100%);
+    }
+    .phone1{
+      background: url("images/iphone.jpg") center center no-repeat;
+      background-size: contain;
+    }
+    .phone2{
+      background: url("images/mi.jpg") center center no-repeat;
+      background-size: contain;
+    }
+    .phone3{
+      background: url("images/nokia.jpg") center center no-repeat;
+      background-size: contain;
+    }
+    .phone4{
+      background: url("images/samsung.jpg") center center no-repeat;
+      background-size: contain;
+    }
+    .phone5{
+      background: url("images/honor.jpg") center center no-repeat;
+      background-size: contain;
+    }
+    .phone6{
+      background: url("images/huawei.jpg") center center no-repeat;
+      background-size: contain;
+    }
+    /* FOOTER */
+
+      .footer {
+    width: 100%;
+    background: url("images/header.jpg")no-repeat center center;
+    background-size: cover;
+    float: left;
+    color: white;
+    font-size: 30px;
+    font-family: serif;
+    text-align: center;
+    padding: 20px 0px;
+    margin-top: 100px;
+    }
+      </style>
+     </head>
+      <body>
+      <header class="header ">
+        <div class="container">
+        <h1>WELCOME TO  MOBILE STORE</h1>
+        <P>Compare and find your ultimate cell phone and mobile service provider in one place!
+          Choose from a range of devices, on the right contract, 
+          the right provider that is suited to your needs with Mobile Store!</P>
+      </div>
+  </header>
+  <div class="parent ">
+    <div class="container">
+    <div class="phone phone1" data-name="IPHONE" data-sell="1000$"> </div>
+    <div class="phone phone2" data-name="MI" data-sell="700$"> </div>
+    <div class="phone phone3" data-name="NOKIA" data-sell="550$"> </div>
+    <div class="phone phone4" data-name="SAMSUNG" data-sell="800$"> </div>
+    <div class="phone phone5" data-name="HONOR" data-sell="450$"> </div>
+    <div class="phone phone6" data-name="HUAWEI" data-sell="500$"> </div>
+  </div>
+</div>
+<!-- footer -->
+<footer class="footer">MOBILE STORE COPYRIGHT 2020 &copy;</footer>
 </body>
 </html>
